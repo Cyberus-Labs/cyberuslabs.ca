@@ -13,11 +13,28 @@
 </head>
 <body class="coming-soon-page">
   <div class="coming-soon-shell">
-    <header class="coming-soon-header" aria-label="Cyberus Labs">
-      <a class="coming-soon-brand" href="index.html" aria-label="Cyberus Labs home">
-        <img src="assets/logo/cyberuslabs_logo.svg" alt="" aria-hidden="true">
-        <span>Cyberus Labs</span>
-      </a>
+    <header class="coming-soon-header" data-header>
+      <nav class="global-nav" aria-label="Main navigation">
+        <a class="coming-soon-brand" href="/" aria-label="Cyberus Labs home" aria-current="page">
+          <img src="assets/logo/cyberuslabs_logo.svg" alt="" aria-hidden="true">
+          <span>Cyberus Labs</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="global-nav-links" id="site-navigation" data-nav-links>
+          <a href="/" aria-current="page">Home</a>
+          <a href="/products/">Products</a>
+          <a href="/projects/">Projects</a>
+          <a href="/team/">The Team</a>
+          <a class="header-contact" href="mailto:contact@cyberuslabs.ca">Contact</a>
+        </div>
+      </nav>
     </header>
 
     <main class="coming-soon-main">

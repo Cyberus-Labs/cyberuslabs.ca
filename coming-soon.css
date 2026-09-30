@@ -104,7 +104,7 @@ img {
   display: inline-flex;
   width: min(100% - 48px, var(--max-width));
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-height: 86px;
   margin: 0 auto;
   color: var(--white);
@@ -116,7 +116,8 @@ img {
 }
 
 .coming-soon-brand img {
-  width: 34px;
+  width: 35px;
+  height: auto;
   filter: drop-shadow(0 0 18px rgba(10, 102, 255, 0.4));
 }
 
@@ -239,7 +240,8 @@ img {
 .coming-soon-mark img {
   position: relative;
   z-index: 2;
-  width: clamp(150px, 20vw, 260px);
+  width: clamp(92px, 12.2vw, 157px);
+  height: auto;
   filter:
     drop-shadow(0 0 28px rgba(10, 102, 255, 0.48))
     drop-shadow(0 32px 70px rgba(0, 0, 0, 0.45));
@@ -360,7 +362,7 @@ img {
   }
 
   .coming-soon-brand img {
-    width: 30px;
+    width: 32px;
   }
 
   .coming-soon-main {
@@ -384,7 +386,7 @@ img {
   }
 
   .coming-soon-mark img {
-    width: clamp(136px, 42vw, 188px);
+    width: clamp(79px, 24.5vw, 111px);
   }
 
   .mark-frame-large {

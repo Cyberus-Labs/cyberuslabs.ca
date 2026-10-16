@@ -1,0 +1,56 @@
+.error-main {
+  width: min(100% - 48px, var(--max-width));
+  margin: 0 auto;
+  padding: 64px 0;
+  align-self: center;
+}
+
+.error-main h1 {
+  margin: 0;
+  color: var(--white);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: 9rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  text-shadow: 0 0 48px rgba(10, 102, 255, 0.18);
+}
+
+.error-main h2 {
+  margin: 24px 0 0;
+  color: var(--white);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+.error-main p {
+  max-width: 52ch;
+  margin: 20px 0 28px;
+  color: var(--muted);
+}
+
+.error-main .home-button:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .error-main {
+    width: min(100% - 34px, var(--max-width));
+  }
+}
+
+@media (max-width: 560px) {
+  .error-main {
+    padding: 48px 0;
+  }
+
+  .error-main h1 {
+    font-size: 6rem;
+  }
+
+  .error-main h2 {
+    font-size: 1.5rem;
+  }
+}

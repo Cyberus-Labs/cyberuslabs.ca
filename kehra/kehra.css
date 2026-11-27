@@ -1,0 +1,279 @@
+/* Kehra landing page. Builds on ../coming-soon.css tokens. */
+
+/* ---------- Hero ---------- */
+.kehra-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 460px);
+  gap: clamp(36px, 7vw, 90px);
+  align-items: center;
+  min-height: min(78vh, 760px);
+  padding-bottom: clamp(56px, 8vw, 96px);
+}
+
+.kehra-hero-copy h1 {
+  margin: 10px 0 0;
+  color: var(--white);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: clamp(3.6rem, 10vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.kehra-hero-statement {
+  margin: 18px 0 0;
+  color: var(--white);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.kehra-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.kehra-hero-points li::before {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 9px;
+  content: "";
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(10, 102, 255, 0.8);
+}
+
+/* Hero visual: a screen-capture frame around a bug card */
+.kehra-capture {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  padding: 12%;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(10, 102, 255, 0.22), transparent 62%);
+}
+
+.capture-corner {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  border-color: var(--accent-soft);
+  border-style: solid;
+  border-width: 0;
+  animation: capture-pulse 3.2s ease-in-out infinite;
+}
+
+.capture-corner-tl { top: 0; left: 0; border-top-width: 3px; border-left-width: 3px; }
+.capture-corner-tr { top: 0; right: 0; border-top-width: 3px; border-right-width: 3px; }
+.capture-corner-bl { bottom: 0; left: 0; border-bottom-width: 3px; border-left-width: 3px; }
+.capture-corner-br { bottom: 0; right: 0; border-bottom-width: 3px; border-right-width: 3px; }
+
+@keyframes capture-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.capture-card {
+  width: 100%;
+  border: 1px solid var(--line);
+  padding: clamp(18px, 3vw, 28px);
+  background: rgba(26, 29, 34, 0.86);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(10, 102, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.capture-id {
+  margin: 0;
+  color: var(--accent-soft);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.capture-title {
+  margin: 8px 0 0;
+  color: var(--white);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.capture-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.capture-tags span {
+  border: 1px solid var(--line);
+  padding: 3px 10px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.capture-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.capture-steps span {
+  border-top: 3px solid rgba(229, 231, 235, 0.14);
+  padding-top: 8px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.capture-steps .is-done { border-color: var(--accent); color: var(--text); }
+.capture-steps .is-active { border-color: var(--accent-soft); color: var(--white); }
+
+/* ---------- Growing feature sections ---------- */
+.kehra-features {
+  display: grid;
+  gap: clamp(36px, 6vw, 72px);
+  padding: clamp(40px, 6vw, 72px) 0 clamp(60px, 8vw, 100px);
+  border-top: 1px solid rgba(229, 231, 235, 0.07);
+  scroll-margin-top: 90px;
+}
+
+.kehra-feature {
+  /* --grow runs 0 -> 1 as the section scrolls toward the middle of the screen */
+  --grow: 1;
+}
+
+.kehra-feature-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(26px, 5vw, 64px);
+  align-items: center;
+  border: 1px solid var(--line);
+  padding: clamp(24px, 4.5vw, 56px);
+  background:
+    linear-gradient(135deg, rgba(10, 102, 255, calc(0.04 + 0.1 * var(--grow))), transparent 60%),
+    rgba(26, 29, 34, calc(0.45 + 0.3 * var(--grow)));
+  box-shadow: 0 30px 90px rgba(10, 102, 255, calc(0.18 * var(--grow)));
+  opacity: calc(0.35 + 0.65 * var(--grow));
+  transform: scale(calc(0.84 + 0.16 * var(--grow)));
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.kehra-feature-reverse .kehra-feature-copy {
+  order: 2;
+}
+
+.kehra-feature h2 {
+  margin: 10px 0 0;
+  color: var(--white);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: clamp(1.2rem, 1.9vw, 1.65rem);
+  font-weight: 900;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.kehra-feature-copy > p:last-child {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+}
+
+.kehra-shot {
+  margin: 0;
+}
+
+.kehra-shot img,
+.kehra-shot-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(90, 156, 255, 0.28);
+  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.kehra-shot-placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(rgba(229, 231, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(229, 231, 235, 0.04) 1px, transparent 1px),
+    rgba(13, 15, 19, 0.75);
+  background-size: 28px 28px;
+}
+
+.kehra-shot-placeholder span {
+  color: var(--muted);
+  font-family: Orbitron, Inter, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ---------- Closing CTA ---------- */
+.kehra-cta {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.kehra-cta > p:not(.section-eyebrow) {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+}
+
+.kehra-cta .home-actions {
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .kehra-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .kehra-capture {
+    width: min(100%, 420px);
+    margin: 0 auto;
+  }
+
+  .kehra-feature-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .kehra-feature-reverse .kehra-feature-copy {
+    order: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capture-corner {
+    animation: none;
+  }
+
+  .kehra-feature {
+    --grow: 1 !important;
+  }
+}

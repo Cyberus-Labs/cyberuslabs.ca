@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kehra is an end-to-end QA tool from Cyberus Labs. Log, refine and deliver bugs to developers from any screen, in a secure, siloed environment.">
+  <title>Kehra | An End-to-End QA Tool | Cyberus Labs</title>
+  <link rel="icon" href="../assets/logo/cyberuslabs_logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../coming-soon.css">
+  <link rel="stylesheet" href="kehra.css">
+</head>
+<body>
+  <div class="coming-soon-shell">
+    <header class="coming-soon-header" data-header>
+      <nav class="global-nav" aria-label="Main navigation">
+        <a class="coming-soon-brand" href="/" aria-label="Cyberus Labs home">
+          <img src="../assets/logo/cyberuslabs_logo.svg" alt="" aria-hidden="true">
+          <span>Cyberus Labs</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="global-nav-links" id="site-navigation" data-nav-links>
+          <a href="/">Home</a>
+          <a href="/kehra/" aria-current="page">Kehra</a>
+          <a href="/team/">The Team</a>
+          <a class="header-contact" href="mailto:contact@cyberuslabs.ca">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="home-main kehra-main">
+      <!-- Hero -->
+      <section class="kehra-hero" aria-labelledby="kehra-title">
+        <div class="kehra-hero-copy">
+          <p class="section-eyebrow">Introducing</p>
+          <h1 id="kehra-title">Kehra</h1>
+          <p class="kehra-hero-statement">An end-to-end QA tool.</p>
+          <p class="coming-soon-text">Log it, refine it, deliver it. Kehra gives QA testers the right tools at the right moment, so every bug reaches developers clear, complete and ready to fix.</p>
+          <div class="home-actions">
+            <a class="home-button home-button-primary" href="mailto:contact@cyberuslabs.ca?subject=Kehra%20Beta%20Access">Join the Beta</a>
+            <a class="home-button" href="#features">See how it works</a>
+          </div>
+          <ul class="kehra-hero-points" aria-label="Kehra at a glance">
+            <li>Built for QA</li>
+            <li>Secure by design</li>
+            <li>Any screen, any platform</li>
+          </ul>
+        </div>
+
+        <div class="kehra-capture" aria-hidden="true">
+          <span class="capture-corner capture-corner-tl"></span>
+          <span class="capture-corner capture-corner-tr"></span>
+          <span class="capture-corner capture-corner-bl"></span>
+          <span class="capture-corner capture-corner-br"></span>
+          <div class="capture-card">
+            <p class="capture-id">BUG-0427</p>
+            <p class="capture-title">Player clips through wall after respawn</p>
+            <div class="capture-tags">
+              <span>Severity: High</span>
+              <span>Repro: 4/5</span>
+            </div>
+            <div class="capture-steps">
+              <span class="is-done">Logged</span>
+              <span class="is-done">Refined</span>
+              <span class="is-active">Delivered</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature sections: each card grows as it scrolls into view (kehra.js) -->
+      <div class="kehra-features" id="features">
+        <section class="kehra-feature" data-grow aria-labelledby="feature-engine-title">
+          <div class="kehra-feature-inner">
+            <div class="kehra-feature-copy">
+              <p class="section-eyebrow">End-to-end QA tool</p>
+              <h2 id="feature-engine-title">Kehra does for QA what game engines do for game development.</h2>
+              <p>Kehra provides the right tools at the right time to assist in the logging, refinement and delivery of a bug to the developers.</p>
+            </div>
+            <figure class="kehra-shot">
+              <!-- Screenshot: replace this placeholder with
+                   <img src="../assets/images/kehra/feature-engine.png" alt="Describe the screenshot"> -->
+              <div class="kehra-shot-placeholder"><span>Screenshot coming soon</span></div>
+            </figure>
+          </div>
+        </section>
+
+        <section class="kehra-feature kehra-feature-reverse" data-grow aria-labelledby="feature-secure-title">
+          <div class="kehra-feature-inner">
+            <div class="kehra-feature-copy">
+              <p class="section-eyebrow">Security</p>
+              <h2 id="feature-secure-title">Kehra is secure.</h2>
+              <p>Kehra provides a secure, siloed environment that only the people you choose can access.</p>
+            </div>
+            <figure class="kehra-shot">
+              <!-- Screenshot: replace this placeholder with
+                   <img src="../assets/images/kehra/feature-secure.png" alt="Describe the screenshot"> -->
+              <div class="kehra-shot-placeholder"><span>Screenshot coming soon</span></div>
+            </figure>
+          </div>
+        </section>
+
+        <section class="kehra-feature" data-grow aria-labelledby="feature-versatile-title">
+          <div class="kehra-feature-inner">
+            <div class="kehra-feature-copy">
+              <p class="section-eyebrow">Versatility</p>
+              <h2 id="feature-versatile-title">Kehra is versatile.</h2>
+              <p>Create bug reports from anything on a screen, whether it's a PC, console or mobile game or app.</p>
+            </div>
+            <figure class="kehra-shot">
+              <!-- Screenshot: replace this placeholder with
+                   <img src="../assets/images/kehra/feature-versatile.png" alt="Describe the screenshot"> -->
+              <div class="kehra-shot-placeholder"><span>Screenshot coming soon</span></div>
+            </figure>
+          </div>
+        </section>
+      </div>
+
+      <!-- Closing call to action -->
+      <section class="home-section kehra-cta" aria-labelledby="kehra-cta-title">
+        <p class="section-eyebrow">Now in Beta</p>
+        <h2 id="kehra-cta-title">Ready to give your QA team better tools?</h2>
+        <p>We're working with a small group of QA teams to shape Kehra. Get in touch to join the beta.</p>
+        <div class="home-actions">
+          <a class="home-button home-button-primary" href="mailto:contact@cyberuslabs.ca?subject=Kehra%20Beta%20Access">Join the Beta</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="coming-soon-footer">
+      <p>&copy; <span data-year></span> Cyberus Labs</p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+  <script src="kehra.js"></script>
+</body>
+</html>

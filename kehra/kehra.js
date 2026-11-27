@@ -1,4 +1,5 @@
-// Grows each [data-grow] section as it scrolls toward the middle of the screen.
+// Grows each [data-grow] section as it scrolls toward the middle of the screen,
+// then shrinks it again as it scrolls away.
 // Sets a --grow custom property (0 to 1) that kehra.css uses for scale, opacity and glow.
 (() => {
   const sections = Array.from(document.querySelectorAll("[data-grow]"));
@@ -22,9 +23,11 @@
 
       const rect = section.getBoundingClientRect();
       const center = rect.top + rect.height / 2;
-      // 0 when the section's centre is at the bottom edge, 1 once it reaches 55% up the screen.
-      const progress = (viewport - center) / (viewport * 0.45);
-      const grow = Math.min(1, Math.max(0, progress));
+      // Distance of the section's centre from the middle of the screen:
+      // 0 at the middle, 1 at the top or bottom edge.
+      const distance = Math.abs(center - viewport / 2) / (viewport / 2);
+      // Full size while within 20% of the middle, shrinking to 0 by the edge.
+      const grow = Math.min(1, Math.max(0, (1 - distance) / 0.8));
       section.style.setProperty("--grow", grow.toFixed(3));
     });
   };

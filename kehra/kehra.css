@@ -154,7 +154,7 @@
 }
 
 .kehra-feature {
-  /* --grow runs 0 -> 1 as the section scrolls toward the middle of the screen */
+  /* --grow peaks at 1 in the middle of the screen and falls to 0 at the top and bottom edges */
   --grow: 1;
 }
 
@@ -170,7 +170,7 @@
     rgba(26, 29, 34, calc(0.45 + 0.3 * var(--grow)));
   box-shadow: 0 30px 90px rgba(10, 102, 255, calc(0.18 * var(--grow)));
   opacity: calc(0.35 + 0.65 * var(--grow));
-  transform: scale(calc(0.84 + 0.16 * var(--grow)));
+  transform: scale(calc(0.808 + 0.192 * var(--grow)));
   transform-origin: center;
   will-change: transform, opacity;
 }

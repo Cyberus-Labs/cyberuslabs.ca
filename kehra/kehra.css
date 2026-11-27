@@ -179,21 +179,11 @@
   order: 2;
 }
 
-.kehra-feature-number {
-  display: block;
-  margin-bottom: 14px;
-  color: rgba(90, 156, 255, 0.35);
-  font-family: Orbitron, Inter, sans-serif;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
-  font-weight: 900;
-  line-height: 1;
-}
-
 .kehra-feature h2 {
   margin: 10px 0 0;
   color: var(--white);
   font-family: Orbitron, Inter, sans-serif;
-  font-size: clamp(1.45rem, 2.6vw, 2.3rem);
+  font-size: clamp(1.2rem, 1.9vw, 1.65rem);
   font-weight: 900;
   line-height: 1.12;
   text-transform: uppercase;
